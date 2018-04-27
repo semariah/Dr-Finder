@@ -16,9 +16,10 @@ $(document).ready(function(){
     promise.then(function(response){
       let body = JSON.parse(response);
       let wholeArray = body.data;
+      $('.result').show(name);
+      $('.result').show(medIssue);
       $('#showname').text(name);
       $('.medical-Issue').text(medIssue);
-      //$('.showsolution').text("");
       //console.log(bodyArray[2]);
       if (wholeArray === 0){
         $('.showsolution').text("0 Doctots Found");
@@ -26,6 +27,7 @@ $(document).ready(function(){
         for (let i = 0; i < wholeArray.length; i++){
           $('.showsolution').append(`<h4>${wholeArray[i].profile.first_name} ${wholeArray[i].profile.last_name}</h4>`);
           $('.showsolution').append(`<li> Address: ${wholeArray[i].practices[0].visit_address.city}, ${wholeArray[i].practices[0].visit_address.state}, ${wholeArray[i].practices[0].visit_address.street}, ${wholeArray[i].practices[0].visit_address.zip}</li>`);
+          $('.showsolution').append(`<li> Phone Number: ${wholeArray[i].practices[0].phones[0].number}, ${wholeArray[i].practices[0].phones[0].type}`)
 
         }
 
