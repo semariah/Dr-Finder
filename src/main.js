@@ -25,7 +25,7 @@ $(document).ready(function(){
       } else {
         for (let i = 0; i < wholeArray.length; i++){
           $('.showsolution').append(`<li> ${wholeArray[i].profile.first_name} ${wholeArray[i].profile.last_name}</li>.`);
-          $('.showsolution').append(`<li> Address: ${wholeArray[i].practices[1].visit_address.city}, ${wholeArray[i].practices[2].state}, ${wholeArray[i].practices[2].street}, ${wholeArray[i].practices[2].zip}</li>.`);
+          $('.showsolution').append(`<li> Address: ${wholeArray[i].practices[0].visit_address.city}, ${wholeArray[i].practices[0].state}, ${wholeArray[i].practices[0].street}, ${wholeArray[i].practices[0].zip}</li>.`);
 
         }
 
