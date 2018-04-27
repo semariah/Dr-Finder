@@ -24,8 +24,8 @@ $(document).ready(function(){
         $('.showsolution').text("0 Doctots Found");
       } else {
         for (let i = 0; i < wholeArray.length; i++){
-          $('.showsolution').append(`<li> ${wholeArray[i].profile.first_name} ${wholeArray[i].profile.last_name}</li>.`);
-          $('.showsolution').append(`<li> Address: ${wholeArray[i].practices[0].visit_address.city}, ${wholeArray[i].practices[0].state}, ${wholeArray[i].practices[0].street}, ${wholeArray[i].practices[0].zip}</li>.`);
+          $('.showsolution').append(`<h4>${wholeArray[i].profile.first_name} ${wholeArray[i].profile.last_name}</h4>`);
+          $('.showsolution').append(`<li> Address: ${wholeArray[i].practices[0].visit_address.city}, ${wholeArray[i].practices[0].visit_address.state}, ${wholeArray[i].practices[0].visit_address.street}, ${wholeArray[i].practices[0].visit_address.zip}</li>`);
 
         }
 
