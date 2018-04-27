@@ -1,32 +1,29 @@
 # _Doctor Lookup_
 
-#### _A web app that helps a user find available doctors and more information about doctors in their area based on the medical issue they have. April 27, 2018_
+#### _A web app that helps a user find available doctors and more information about doctors in Portland area based on the medical issue they have. April 27, 2018_
 
 #### By _**Semhar Kidane**_
 
 ## Description
 
-_This web app will take user entered data such as age or a time span to calculate their age on different planets, as well as their age in seconds on earth._
+_This web app will take user entered data such as name, location and their medical issue to give them a list of doctors API's with all the info they need about the doctor in Portland._
 
 
 ### User Story
 
 | User Behavior | Input | Output |
 |----|----|----|  
-| A user enters their age can convert it into seconds | 20 years | 630720000 seconds |
-| A user enters two dates and can determine the difference in seconds between the two  |May 20, 2017 - May 21, 2017 | 86400 seconds |
-| A user enters their age in human years and it's calculated to Mercury years | 20 Earth years | 83 Mercury years|
-| A user enters their age in human years and it's calculated to Venus years | 20 Earth years  | 32 Venus years|
-| A user enters their age in human years and it's calculated to Mars years | 20 Earth years  | 10 Mars years|
-| A user enters their age in human years and it's calculated to Jupiter years| 20 Earth years | 1 Jupiter Years|
-| User enters age and can determine their average life expectancy on each planet| 20 Earth years old | Your expected to live for this many days on....|
-| If the user has surpassed their average life expectancy| 100 Earth years | you have passed the estimated age stay healthy! message.|
+A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
+A user should be able to to enter a name to receive a list of doctors in the Portland area that fit the search query.
+If the query response includes any doctors, the following information should be included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients (the API provides this data).
+If the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is.
+If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application should return a notification that states that no doctors meet the criteria. (This is not an error so it should be handled separately from any errors.)
 
 
 
 ## Setup/Installation Requirements
 
-* _Clone repo and install npm to get started._
+* _Clone repo and install npm and npm run start in the terminal to get started._
 
 
 ## Known Bugs
@@ -42,7 +39,7 @@ _If you run into any issues or have questions, ideas or concerns, contact me at 
 ## Technologies Used
 
 * _Javascript ES6_
-* _Npm, linter_
+* _Npm_
 * _Jasmine, Karma_
 
 ### License
