@@ -1,11 +1,5 @@
-# OS generated files #
-######################
 node_modules/
 .DS_Store
 dist/
 .DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+.env
