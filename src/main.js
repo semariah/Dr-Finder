@@ -23,7 +23,7 @@ $(document).ready(function(){
       if (wholeArray === 0){
         $('.showsolution').text("0 Doctots Found");
       } else {
-        $('.showsolution').text(`Doctor names are : ${body.data[0].practices[0].name}.`);
+        $('.showsolution').append(`<li> ${body.data[0].practices[0].name}</li>.`);
       }
 
     }, function(error){
