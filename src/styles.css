@@ -1,3 +1,17 @@
 body {
-  background-color: #a4a4a4;
+  background-color: #ffd8ca;
+}
+
+.button {
+  margin-bottom: 20px;
+}
+
+.showsolution {
+  margin-top: 30px;
+}
+
+.result {
+  margin: 20 auto 0 auto;
+  border: 20px solid white;
+  display: none;
 }
