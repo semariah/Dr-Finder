@@ -15,12 +15,17 @@ $(document).ready(function(){
     let promise = api.docInfo();
     promise.then(function(response){
       let body = JSON.parse(response);
-      //let bodyArray = body.data;
+      let wholeArray = body.data;
       $('#showname').text(name);
       $('.medical-Issue').text(medIssue);
-      $('.showsolution').text("");
+      //$('.showsolution').text("");
       //console.log(bodyArray[2]);
-      //$('.showsolution').text(`Doctor names are : ${body.data[0].practices[0].name}.`);
+      if (wholeArray === 0){
+        $('.showsolution').text("0 Doctots Found");
+      } else {
+        $('.showsolution').text(`Doctor names are : ${body.data[0].practices[0].name}.`);
+      }
+
     }, function(error){
       $('.showErrors').text(`there was an error processing your request: ${error.message}`);
     });
