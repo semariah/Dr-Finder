@@ -23,7 +23,12 @@ $(document).ready(function(){
       if (wholeArray === 0){
         $('.showsolution').text("0 Doctots Found");
       } else {
-        $('.showsolution').append(`<li> ${body.data[0].practices[0].name}</li>.`);
+        for (let i = 0; i < wholeArray.length; i++){
+          $('.showsolution').append(`<li> ${wholeArray[i].profile.first_name} ${wholeArray[i].profile.last_name}</li>.`);
+          $('.showsolution').append(`<li> Address: ${wholeArray[i].practices[1].visit_address.city}, ${wholeArray[i].practices[2].state}, ${wholeArray[i].practices[2].street}, ${wholeArray[i].practices[2].zip}</li>.`);
+
+        }
+
       }
 
     }, function(error){
