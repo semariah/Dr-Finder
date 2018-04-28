@@ -47,38 +47,3 @@ _If you run into any issues or have questions, ideas or concerns, contact me at 
 MIT License
 
 Copyright (c) 2018 **_Semhar Kidane_**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# webhook-template
-Quick environment set up
-
-`$ git clone https://github.com/johnnyrayalt/webhook-template.git`
-
-`$ npm install`
-
-`$ npm run start`

@@ -1,4 +1,3 @@
-//import { pingPong } from './scripts.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
@@ -10,7 +9,6 @@ $(document).ready(function(){
     event.preventDefault();
     let name = $("#name").val();
     let medIssue = $("#med-issue").val();
-    //$("#med-issue").val("");
     let api = new DocApi();
     let promise = api.docInfo();
     promise.then(function(response){
@@ -20,7 +18,6 @@ $(document).ready(function(){
       $('.result').show(medIssue);
       $('#showname').text(name);
       $('.medical-Issue').text(medIssue);
-      //console.log(bodyArray[2]);
       if (wholeArray === 0){
         $('.showsolution').text("0 Doctors meet your search criteria");
       } else {
@@ -31,12 +28,9 @@ $(document).ready(function(){
           $('.showsolution').append(`<li> Accepts New Patients : ${wholeArray[i].practices[0].accepts_new_patients}</li>`);
           $('.showsolution').append(`${wholeArray[i].practices[0].website}`);
         }
-
       }
     }, function(error){
       $('.showErrors').text(`there was an error processing your request: ${error.message}`);
     });
-
-
   });
 });
