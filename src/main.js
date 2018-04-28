@@ -18,7 +18,7 @@ $(document).ready(function(){
       $('.result').show(medIssue);
       $('#showname').text(name);
       $('.medical-Issue').text(medIssue);
-      if (wholeArray === 0){
+      if (wholeArray.length === 0){
         $('.showsolution').text("0 Doctors meet your search criteria");
       } else {
         for (let i = 0; i < wholeArray.length; i++){
@@ -26,6 +26,7 @@ $(document).ready(function(){
           $('.showsolution').append(`<li> Address: ${wholeArray[i].practices[0].visit_address.city}, ${wholeArray[i].practices[0].visit_address.state}, ${wholeArray[i].practices[0].visit_address.street}, ${wholeArray[i].practices[0].visit_address.zip}</li>`);
           $('.showsolution').append(`<li> Phone Number: ${wholeArray[i].practices[0].phones[0].number}, ${wholeArray[i].practices[0].phones[0].type}`);
           $('.showsolution').append(`<li> Accepts New Patients : ${wholeArray[i].practices[0].accepts_new_patients}</li>`);
+          if ()
           $('.showsolution').append(`${wholeArray[i].practices[0].website}`);
         }
       }
