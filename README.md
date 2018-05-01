@@ -9,21 +9,24 @@
 _This web app will take user entered data such as name, location and their medical issue to give them a list of doctors API's with all the info they need about the doctor in Portland._
 
 
-### User Story
+### Specs
 
 | User Behavior | Input | Output |
-|----|----|----|  
-A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
-A user should be able to to enter a name to receive a list of doctors in the Portland area that fit the search query.
-If the query response includes any doctors, the following information should be included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients (the API provides this data).
-If the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is.
-If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application should return a notification that states that no doctors meet the criteria. (This is not an error so it should be handled separately from any errors.)
+|----|----|----|
+Enter your name | Jhon Doe | Jhon Doe
+Enter a medical issue | soar throat | List of doctors
+If the query response includes any doctors, the following information should be included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.
+If the API call results in an error, the application should return a notification that states what the error is.
+If the query response doesn't include any doctors, the application should return a notification that states that no doctors meet the criteria.
 
 
 
 ## Setup/Installation Requirements
 
 * _Clone repo and install npm and npm run start in the terminal to get started._
+* _Sign up for an api key from BetterDoctor API website._
+* _Replace your personal api key in the url, with ${process.env.exports.apiKey}._
+* _Run $ npm run start in your terminal to get your search results._
 
 
 ## Known Bugs
