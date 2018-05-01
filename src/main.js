@@ -26,10 +26,10 @@ $(document).ready(function(){
           $('.showsolution').append(`<li> Address: ${wholeArray[i].practices[0].visit_address.city}, ${wholeArray[i].practices[0].visit_address.state}, ${wholeArray[i].practices[0].visit_address.street}, ${wholeArray[i].practices[0].visit_address.zip}</li>`);
           $('.showsolution').append(`<li> Phone Number: ${wholeArray[i].practices[0].phones[0].number}, ${wholeArray[i].practices[0].phones[0].type}`);
           $('.showsolution').append(`<li> Accepts New Patients : ${wholeArray[i].practices[0].accepts_new_patients}</li>`);
-          if (wholeArray[i].practices[0].website === undefined){
-            $('.showsolution').append(`Website: None`);
+          if (wholeArray[i].practices[0].website !== undefined){
+            $('.showsolution').append(`<li>${wholeArray[i].practices[0].website}</li>`);
           } else {
-            $('.showsolution').append(`${wholeArray[i].practices[0].website}`);
+            $('.showsolution').append(`<li> Website: None </li>`);
           }
         }
       }
