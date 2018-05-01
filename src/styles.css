@@ -12,6 +12,6 @@ body {
 
 .result {
   margin: 20 auto 0 auto;
-  border: 20px solid white;
+  border: 10px solid white;
   display: none;
 }
