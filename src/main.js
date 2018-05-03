@@ -4,20 +4,22 @@ import './styles.css';
 import $ from 'jquery';
 import {DocApi} from './Api.js';
 
+
 $(document).ready(function(){
   $("#doctor-form").submit(function(event){
     event.preventDefault();
-    let name = $("#name").val();
+    debugger;
+    // let name = $("#name").val();
     let medIssue = $("#med-issue").val();
+    // $('.result').show(name);
+    $('.result').show(medIssue);
+    // $('#showname').text(name);
+    $('.medical-Issue').text(medIssue);
     let api = new DocApi();
-    let promise = api.docInfo();
+    let promise = api.makeApiCall();
     promise.then(function(response){
       let body = JSON.parse(response);
       let wholeArray = body.data;
-      $('.result').show(name);
-      $('.result').show(medIssue);
-      $('#showname').text(name);
-      $('.medical-Issue').text(medIssue);
       if (wholeArray.length === 0){
         $('.showsolution').text("0 Doctors meet your search criteria");
       } else {
