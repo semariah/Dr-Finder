@@ -12,7 +12,7 @@ $(document).ready(function(){
     $('.result').show(medIssue);
     $('.medical-Issue').text(medIssue);
     let api = new DocApi();
-    let promise = api.makeApiCall();
+    let promise = api.makeApiCall(medIssue);
     promise.then(function(response){
       let body = JSON.parse(response);
       let wholeArray = body.data;
