@@ -8,12 +8,8 @@ import {DocApi} from './Api.js';
 $(document).ready(function(){
   $("#doctor-form").submit(function(event){
     event.preventDefault();
-    debugger;
-    // let name = $("#name").val();
     let medIssue = $("#med-issue").val();
-    // $('.result').show(name);
     $('.result').show(medIssue);
-    // $('#showname').text(name);
     $('.medical-Issue').text(medIssue);
     let api = new DocApi();
     let promise = api.makeApiCall();
